@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>CORP Lobbying and Bills</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <div class="wrapper d-flex align-items-stretch">
+        <!-- Sidebar Start -->
+    <nav id="sidebar">
+      <center>
+        <h5 style="color: var(--white)">
+          <img src="./images/logo.png" class="showShortForm p-1"
+            style="height: 30px; width: 30px; border: 1px solid var(--white);" />
+        </h5>
+        <h5 style="color: var(--white)" class="nav-lable px-4 text-left">
+          <div class="d-flex">
+            <img src="./images/logo.png" class="p-1" style="height: 40px; width: 40px; border: 1px solid var(--white);" />
+            <p class="d-inline-block ml-2" style="font-weight: 400; font-size: 14px;"><small class="d-block"
+                style="font-weight: 700; font-size: 17px">Trade Engine </small> Charts</p>
+          </div>
+        </h5>
+      </center>
+      <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-secondary btn-sm">
+          <i class="toggle-icon fa"></i>
+          <span class="sr-only">Toggle Menu</span>
+        </button>
+      </div>
+      <ul class="list-unstyled components mb-5 mt-5" style="max-height: 400px; overflow: auto;">
+        <li>
+          <a href="#"><span class="fa fa-home"></span><span class="nav-lable">Dashboard</span> </a>
+        </li>
+        <li>
+          <a href="#"><span class="fa fa-line-chart"></span> <span class="nav-lable">Tradings</span></a>
+
+
+        </li>
+        <li class="dropdown-btn">
+          <a href="#">
+            <span class="fa fa-bar-chart"></span> <span class="nav-lable">Analytics</span>
+            <!-- <span class="fa fa-caret-down"></span> -->
+          </a>
+        </li>
+        <div class="dropdown-container">
+          <li><a href="./forex.html">Currencies</a></li>
+          <li><a href="./index.html">Stock Profile</a></li>
+        </div>
+        <li class="dropdown-btn active">
+          <a href="#"><span class="fa fa-lock"></span><span class="nav-lable">Research</span> </a>
+        </li>
+        <div class="dropdown-container">
+          <li><a href="#">Bank Reports</a></li>
+          <li><a href="./Inst_Insider.html">Whale Analysis</a></li>
+          <li><a href="./governmentTrade.html">Government</a></li>
+          <li class="active"><a href="./corpLobbying.html">Lobbying & Bills</a></li>
+        </div>
+        <li>
+          <a href="#"><span class="fa fa-newspaper-o"></span>
+            <span class="nav-lable">Case Studies</span></a>
+        </li>
+        <li>
+          <a href="./social.html"><span class="fa fa-heart-o"></span> <span class="nav-lable">Social</span></a>
+        </li>
+        <li>
+          <a href="#"><span class="fa fa-cog"></span> <span class="nav-lable">Setting</span></a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./images/logo.png" style="height: 20px; width: 20px; border-radius: 50%; margin-right: 5px;" />
+            <span class="nav-lable">My Profile</span></a>
+          </a>
+        </li>
+      </ul>
+      <div class="d-flex justify-content-center flex-column text-center align-items-center" style="margin-top: 60px;">
+        <div class="d-flex justify-content-center flex-row text-center align-items-center px-2 py-1 ml-3"
+          style="border: 1px solid var(--white); border-radius: 4px;  cursor: pointer;">
+          <span class="fa fa-sign-out mr-2"></span> <span class="nav-lable">Logout</span>
+        </div>
+        <div class="mt-2">
+          Copyright &copy;
+          <script>document.write(new Date().getFullYear())</script> All rights reserved</a>
+
+        </div>
+      </div>
+    </nav>
+        <!-- Sidebar End -->
+
+
+    <!-- Page Content  -->
+    <div id="content" class="container-fluid md-5 pb-1 m-0" style="height: 100vh; overflow-x: hidden;">
+      <div class="container-fluid">
+        <div class="row p-2">
+          <div class="col-12 text-white">
+            <div class="card p-3 pl-4" style="background-color: var(--bg-gray) ">
+              <h1 class="text-white" style="font-weight: 700; font-size: 30px"> Corporate Lobbying & Bills</h1>
+              <p style="font-weight: 500; font-size: 16px;">Corporate lobbying refers to the practice of companies
+                attempting to influence
+                the decisions and actions of lawmakers, by providing financial support or other resources.
+                This often involves companies using their financial power to persuade lawmakers to
+                introduce, amend or pass legislation that aligns with their interests or to defeat legislation
+                that may negatively impact their business. By using our data, we have collected the top 20
+                companies who have spent the most on corporate lobbying in the recent quarter to
+                investigate whether these actions can impact their stock prices. Alternatively, by also
+                focusing on bills (as well as companies) we can highlight exactly what bills and legislation
+                acts are of high interest in various companies..</p>
+            </div>
+          </div>
+
+          <!-- Lobbying List Data Column Start -->
+          <div class="col-sm-12 col-md-6 col-lg-8 mt-4">
+            <div class="card card-class">
+              <div class="card-header item-header">
+                Bills with highest backing
+              </div>
+              <div class="card-body item-body" style="max-height: 300px; overflow-y: auto;">
+                <div id="lobbyingListData"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Lobbying List Data Column End -->
+
+          <!-- Firm Backings Column Start -->
+          <div class="col-sm-12 col-md-6 col-lg-4 mt-4">
+            <div class="card card-class">
+              <div class="card-header item-header">
+                Firm Backing
+              </div>
+              <div class="card-body item-body" style="max-height: 300px; overflow-y: auto;">
+                <div id="firmBackings"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Firm Backings Column End -->
+
+          <!-- Highest Booking Column Start -->
+          <div class="col-12 mt-4 highestBooking">
+            <div class="card card-class">
+              <div class="card-header item-header">
+                Bills with highest booking
+              </div>
+              <div class="card-body item-body">
+                <!-- This is where you can increase or decrease the height of charts -->
+                <canvas id="highestBooking" style="width:100%; height: 340px;"></canvas>
+              </div>
+            </div>
+          </div>
+          <!-- Highest Booking Column End -->
+
+          <!-- TopCorpLobby Column Start -->
+          <div class="col-12 topCorpLobby mt-4">
+            <div class="card card-class">
+              <div class="card-header item-header">
+                Corp Lobby Top 20+
+              </div>
+              <div class="card-body item-body">
+                <!-- This is where you can increase or decrease the height of charts -->
+                <canvas id="topCorpLobby" style="width:100%; height: 340px;"></canvas>
+              </div>
+            </div>
+          </div>
+          <!-- TopCorpLobby Column End -->
+        </div>
+      </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="./js/corpsLobbying.js"></script>
+</body>
+
+</html>

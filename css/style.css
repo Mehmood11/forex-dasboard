@@ -1,0 +1,482 @@
+/*!
+ * Bootstrap v4.3.1 (https://getbootstrap.com/)
+ * Copyright 2011-2019 The Bootstrap Authors
+ * Copyright 2011-2019 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+:root {
+  --red: #dc3545;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --color-border-gray: #2f3f4d;
+  --bg-gray: #222933;
+  --color-header-bg: #1f242d;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+  font-weight: normal;
+  background: rgb(26 30 38);
+  color: var(--gray);
+}
+/* ------------------------ for Scrolller Styling Start --------------------*/
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #647cac;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: #353e50;
+  border-radius: 8px;
+}
+
+@media screen and (max-height: 950px) {
+  .indexBody::-webkit-scrollbar {
+    display: none !important;
+  }
+}
+/* #content::-webkit-scrollbar {
+  display: none;
+} */
+.components::-webkit-scrollbar {
+  width: 4px;
+}
+
+/*------------------- for Scrolller Styling End -------------------------- */
+
+/* Row, column and Text Styling class Start  */
+a:hover,
+a:focus {
+  text-decoration: none !important;
+  outline: none !important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.btn-secondary:focus {
+  box-shadow: none;
+}
+.wrapper {
+  width: 100%;
+}
+
+/* ----------------------Sidebar Styling Start------------------------- */
+
+#sidebar {
+  min-width: 230px;
+  max-width: 230px;
+  background: #1f242d;
+  color: var(--white);
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  position: relative;
+  padding-top: 46px;
+}
+#sidebar.active {
+  min-width: 80px;
+  max-width: 80px;
+  text-align: center;
+}
+#sidebar.active ul.components li {
+  font-size: 14px;
+}
+#sidebar.active ul.components li a {
+  padding: 10px 0;
+}
+#sidebar.active ul.components li a span {
+  margin-right: 0;
+  display: block;
+  font-size: 24px;
+}
+#sidebar.active .logo {
+  padding: 10px 0;
+}
+#sidebar .logo {
+  display: block;
+  color: var(--white);
+  font-weight: 900;
+  padding: 10px 30px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+@media (prefers-reduced-motion: reduce) {
+  #sidebar .logo {
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
+}
+#sidebar ul.components {
+  padding: 0;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+@media (prefers-reduced-motion: reduce) {
+  #sidebar ul.components {
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
+}
+#sidebar ul li {
+  font-size: 16px;
+}
+#sidebar ul li > ul {
+  margin-left: 10px;
+}
+#sidebar ul li > ul li {
+  font-size: 14px;
+}
+#sidebar ul li a {
+  padding: 10px 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--white);
+  border-bottom: none !important;
+}
+#sidebar.active ul li a {
+  justify-content: center;
+  display: block;
+}
+#sidebar ul li a span {
+  margin-right: 15px;
+}
+
+ul li.active {
+  background-color: #353e50;
+}
+ul li:hover,
+ul li a:hover {
+  background-color: #566073;
+}
+#sidebar ul li a {
+  font-weight: 700 !important;
+}
+
+@media (max-width: 991.98px) {
+  #sidebar ul li a span {
+    display: block;
+  }
+}
+#sidebar ul li a:hover {
+  color: var(--white);
+}
+#sidebar ul li.active > a {
+  background: transparent;
+  color: var(--white);
+}
+@media (max-width: 991.98px) {
+  #sidebar {
+    min-width: 230px;
+    max-width: 230px;
+  }
+  #sidebar.active {
+    margin-left: 0 !important;
+  }
+}
+
+a[data-toggle="collapse"] {
+  position: relative;
+}
+
+@media (max-width: 991.98px) {
+  #sidebarCollapse span {
+    display: none;
+  }
+}
+
+/* -----------------For custom-menu Styling Start ------------------ */
+#sidebar .custom-menu {
+  display: inline-block;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  margin-right: -20px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 1;
+}
+/* --------------- For custom-menu Styling ENd -------------- */
+
+/* ----------------------Sidebar Styling Ends------------------------- */
+
+/* ------------------Main content Div styling Start----------------------- */
+#content {
+  width: 100%;
+  padding: 0;
+  min-height: 100vh;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  margin: 0.5rem 0.5rem 0 0.5rem;
+}
+/* ------------------Main content Div styling End----------------------- */
+
+/* ------------------Main Home Page Header styling Start----------------------- */
+.homepage-banner {
+  background-color: var(--color-header-bg);
+  border-radius: 4px;
+}
+
+/* ------------------Main Home Page Header styling End----------------------- */
+
+/* ---------------- Styling for each specific Card Start --------------------- */
+.card-class {
+  border: 1px solid var(--color-border-gray);
+  height: 100%;
+  color: var(--white);
+  overflow: auto;
+  background: rgb(26 30 38);
+}
+.item-header {
+  background-image: linear-gradient(to right bottom, #27313d, #232a35, #212630);
+}
+
+.item-body {
+  background: rgb(26 30 38);
+}
+/* ---------------- Styling for each specific Card End --------------------- */
+
+/* -------------------- Ticker Size Styling Start ----------------------*/
+a.tv-ticker-item-tape,
+a.tv-ticker-item-tape--compact {
+  width: 300px !important;
+}
+.tv-ticker-item-tape__inner-wrapper {
+  display: flex !important;
+  align-items: center !important;
+}
+/* -------------------- Ticker Size Styling End ----------------------*/
+
+/*---------------------- widget Styling Start ------------------------*/
+.widget {
+  min-width: unset !important;
+  max-width: unset !important;
+  width: 100% !important;
+}
+/*----------------------- widget Styling End -------------------------*/
+
+/* --------------------- Input Field Styling Start ---------------------------*/
+input,
+input::placeholder,
+input:focus {
+  color: var(--white);
+}
+/* --------------------- Input Field Styling End----------------------------*/
+
+/* --------------------- Table Styling Start ------------------------------ */
+table tr {
+  white-space: nowrap;
+}
+table thead {
+  border-top: none !important;
+}
+
+/*------------------- institutional-top-holder-table--------------- */
+#institutional-top-holder-table,
+#corporate-Lobbying-table {
+  font-size: 10px;
+  font-weight: bolder;
+}
+#institutional-top-holder-table-body {
+  font-size: 10px;
+  font-weight: 400;
+}
+/*------------------- institutional-top-holder-table--------------- */
+
+/*----------------------- Table Styling End------------------------- */
+
+/* -----------------------Social Media Page Styling Start ------------------*/
+
+/* --------- For Header  Start ----------- */
+#social-header {
+  display: flex;
+  list-style: none;
+}
+#social-header li {
+  margin-right: 12px;
+  font-size: 8px;
+}
+#social-header li:hover,
+#social-header li a:hover {
+  background-color: transparent !important;
+}
+#social-header li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--white);
+  font-size: 10px;
+  text-align: center;
+}
+#social-header li a i {
+  font-size: 25px;
+}
+
+/* --------- For Header End----------- */
+
+/* --------------For Input Styling Start ------------- */
+
+.form-div {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+.post-input {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid var(--color-border-gray);
+  padding: 10px;
+  width: 100%;
+  border-radius: 50px;
+}
+.post-input i {
+  font-size: 20px;
+  color: var(--white);
+  margin-left: 20px;
+}
+.post-input input {
+  width: 100%;
+  outline: none;
+}
+/* --------------For Input Styling End ------------- */
+
+/* --------------- Social Media Page's button animation Start --------------- */
+.buttons {
+  border: 0;
+  outline: 0;
+  padding: 1.5rem 2rem;
+  font-size: 4rem;
+  transition: all 0.3s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.uploadButtons {
+  padding: 0.5rem 1rem;
+  transition: all 0.3s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.uploadButtons:hover,
+.postButton:hover {
+  background-color: rgb(26 30 38) !important;
+}
+.buttons:hover {
+  background-color: #1f242d;
+  transform: scale(1.03);
+}
+.buttons:active,
+.uploadButtons:active,
+.postButton {
+  transform: scale(0.98) !important;
+}
+
+/* --------------- Social Media Page's button animation End --------------- */
+
+/* ------------- Some Classes for dropDown, Hover and for icon Start -----------*/
+.dropdown-toggle::after {
+  display: none;
+}
+.fa-chevron-down {
+  font-size: 8px !important;
+}
+.thumbs-up,
+.fa-edit {
+  font-size: 24px;
+}
+
+.hoverclass:hover {
+  border: 1px solid rgba(243, 238, 238, 0.303) !important;
+}
+#dropdownMenu2:hover {
+  cursor: pointer;
+}
+@media screen and (max-width: 737px) {
+  .hideText {
+    font-size: 10px !important;
+  }
+  .thumbs-up,
+  .fa-edit {
+    font-size: 12px;
+  }
+}
+/* -------------Some Classes for dropDown, Hover and for icon End -----------------*/
+
+/* -----------------------Social Media Page Styling Start ------------------*/
+
+
+
+
+/*--------------- Specific News and Lobying List Styling Start --------------*/
+#liveForexNews::-webkit-scrollbar {
+  width: 5px !important;
+}
+#specific-news {
+  background-color: #222833;
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#specific-news:hover {
+  background-color: #566073;
+}
+.lobbyingList:hover {
+  background-color: #566073;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.activelobbyingList {
+  background-color: #222933;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.activelobbyingList:hover {
+  background-color: #566073;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* --------------------- specific-news and Lobying List Styling End ---------------*/
+
+
+/* ------------------ Dropdown Styling Start ----------------- */
+.dropdown-container {
+  display: none;
+  float: right;
+  padding-left: 14px;
+  white-space: normal;
+  width: 92%;
+}
+.dropdown-container.addStyle {
+  z-index: 111;
+  font-size: 11px !important;
+  float: left;
+}
+.dropdown-container.addStyle li {
+  font-size: 10px !important;
+}.table {
+  color: var(--white);
+}
+/* ------------------ Dropdown Styling End --------------------- */.tale

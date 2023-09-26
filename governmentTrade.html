@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Government Trades</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+  <div class="wrapper d-flex align-items-stretch">
+        <!-- Sidebar Start -->
+    <nav id="sidebar">
+      <center>
+        <h5 style="color: var(--white)">
+          <img src="./images/logo.png" class="showShortForm p-1"
+            style="height: 30px; width: 30px; border: 1px solid var(--white);" />
+        </h5>
+        <h5 style="color: var(--white)" class="nav-lable px-4 text-left">
+          <div class="d-flex">
+            <img src="./images/logo.png" class="p-1" style="height: 40px; width: 40px; border: 1px solid var(--white);" />
+            <p class="d-inline-block ml-2" style="font-weight: 400; font-size: 14px;"><small class="d-block"
+                style="font-weight: 700; font-size: 17px">Trade Engine </small> Charts</p>
+          </div>
+        </h5>
+      </center>
+      <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-secondary btn-sm">
+          <i class="toggle-icon fa"></i>
+          <span class="sr-only">Toggle Menu</span>
+        </button>
+      </div>
+      <ul class="list-unstyled components mb-5 mt-5" style="max-height: 400px; overflow: auto;">
+        <li>
+          <a href="#"><span class="fa fa-home"></span><span class="nav-lable">Dashboard</span> </a>
+        </li>
+        <li>
+          <a href="#"><span class="fa fa-line-chart"></span> <span class="nav-lable">Tradings</span></a>
+
+
+        </li>
+        <li class="dropdown-btn">
+          <a href="#">
+            <span class="fa fa-bar-chart"></span> <span class="nav-lable">Analytics</span>
+            <!-- <span class="fa fa-caret-down"></span> -->
+          </a>
+        </li>
+        <div class="dropdown-container">
+          <li><a href="./forex.html">Currencies</a></li>
+          <li><a href="./index.html">Stock Profile</a></li>
+        </div>
+        <li class="dropdown-btn  active">
+          <a href="#"><span class="fa fa-lock"></span><span class="nav-lable">Research</span> </a>
+        </li>
+        <div class="dropdown-container">
+          <li><a href="#">Bank Reports</a></li>
+          <li><a href="./Inst_Insider.html">Whale Analysis</a></li>
+          <li class="active"><a href="./governmentTrade.html">Government</a></li>
+          <li><a href="./corpLobbying.html">Lobbying & Bills</a></li>
+        </div>
+        <li>
+          <a href="#"><span class="fa fa-newspaper-o"></span>
+            <span class="nav-lable">Case Studies</span></a>
+        </li>
+        <li>
+          <a href="./social.html"><span class="fa fa-heart-o"></span> <span class="nav-lable">Social</span></a>
+        </li>
+        <li>
+          <a href="#"><span class="fa fa-cog"></span> <span class="nav-lable">Setting</span></a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./images/logo.png" style="height: 20px; width: 20px; border-radius: 50%; margin-right: 5px;" />
+            <span class="nav-lable">My Profile</span></a>
+          </a>
+        </li>
+      </ul>
+      <div class="d-flex justify-content-center flex-column text-center align-items-center" style="margin-top: 60px;">
+        <div class="d-flex justify-content-center flex-row text-center align-items-center px-2 py-1 ml-3"
+          style="border: 1px solid var(--white); border-radius: 4px;  cursor: pointer;">
+          <span class="fa fa-sign-out mr-2"></span> <span class="nav-lable">Logout</span>
+        </div>
+        <div class="mt-2">
+          Copyright &copy;
+          <script>document.write(new Date().getFullYear())</script> All rights reserved</a>
+
+        </div>
+      </div>
+    </nav>
+        <!-- Sidebar End -->
+
+
+    <!-- Page Content  -->
+    <div id="content" class="container-fluid md-5 m-0" style="height: 97vh; overflow-x: hidden;">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 p-4 text-white">
+            <div class="card p-3 pl-4" style="background-color: var(--bg-gray)">
+              <h1 class="text-white" style="font-weight: 700; font-size: 30px"> Government trading tracker</h1>
+              <p style="font-weight: 500; font-size: 16px;">Since the approval of the Stop Trading on Congressional
+                Knowledge Act of 2012
+                (STOCK Act), US government officials are required to make public of all securities
+                transactions with a value above $1,000 within 30 days of receiving notice of transaction and
+                within 45 days of the transaction date. We collect this data through reputable sources (eFD)
+                and process into a readable database. You can view this information below.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row px-2">
+
+          <!-- Recent Senator Trades Column Start -->
+          <div class="col-12 recent-senator-trade">
+            <div class="card card-class">
+              <div class="card-header item-header">
+                Recent Senator Trades
+              </div>
+              <div class="card-body item-body  table-responsive">
+                <table class="table" style="max-width: 100%">
+                  <thead>
+                    <tr>
+                      <th>Type</th>
+                      <th>Party</th>
+                      <th>State</th>
+                      <th>Amount</th>
+                      <th>Ticker</th>
+                      <th>Senator</th>
+                      <th>Industry</th>
+                      <th>Asset Type</th>
+                      <th>Disclosure Date</th>
+                      <th>Transaction Date</th>
+                      <th>Asset Description</th>
+                    </tr>
+                  </thead>
+                  <tbody id="corporate-lobbying-table-body">
+                    <tr>
+                      <td>Sale (Full)</td>
+                      <td>Republican</td>
+                      <td>AL</td>
+                      <td>$1,001 - $15,000</td>
+                      <td>TSM</td>
+                      <td>Tommy Tuberville</td>
+                      <td>Semiconductors</td>
+                      <td>Stock Option</td>
+                      <td>12/14/2022</td>
+                      <td>12/14/2022</td>
+                      <td>Taiwan Semiconductor Manufacturing Company Ltd. </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+          <!-- Recent Senator Trades Column End -->
+
+
+          <!--  Recent House Trades Column Start -->
+          <div class="col-12 mt-3 recent-house-trade">
+            <div class="card card-class">
+              <div class="card-header item-header">
+                Recent House Trades
+              </div>
+              <div class="card-body item-body table-responsive">
+                <table class="table " style="width: 100%;">
+                  <thead>
+                    <tr>
+                      <th>Type</th>
+                      <th>Party</th>
+                      <th>State</th>
+                      <th>Amount</th>
+                      <th>Ticker</th>
+                      <th>Industry</th>
+                      <th>Representative</th>
+                      <th>Disclosure Date</th>
+                      <th>Transaction Date</th>
+                      <th>Asset Description</th>
+                    </tr>
+                  </thead>
+                  <tbody id="corporate-lobbying-table-body">
+                    <tr>
+                      <td>Sale (Full)</td>
+                      <td>Republican</td>
+                      <td>AL</td>
+                      <td>$1,001 - $15,000</td>
+                      <td>TSM</td>
+                      <td>Semiconductors</td>
+                      <td>Garret Graves</td>
+                      <td>12/14/2022</td>
+                      <td>12/14/2022</td>
+                      <td>Taiwan Semiconductor Manufacturing Company Ltd. </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+          <!--  Recent House Trades Column End -->
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- </div> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

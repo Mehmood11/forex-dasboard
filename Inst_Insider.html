@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Instl & Insider Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="wrapper d-flex align-items-stretch">
+        <!-- Sidebar Start -->
+
+    <nav id="sidebar">
+      <center>
+        <h5 style="color:var(--white)">
+          <img src="./images/logo.png" class="showShortForm p-1"
+            style="height: 30px; width: 30px; border: 1px solid var(--white);" />
+        </h5>
+        <h5 style="color: var(--white)" class="nav-lable px-4 text-left">
+          <div class="d-flex">
+            <img src="./images/logo.png" class="p-1" style="height: 40px; width: 40px; border: 1px solid var(--white);" />
+            <p class="d-inline-block ml-2" style="font-weight: 400; font-size: 14px;"><small class="d-block"
+                style="font-weight: 700; font-size: 17px">Trade Engine </small> Charts</p>
+          </div>
+        </h5>
+      </center>
+      <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-secondary btn-sm">
+          <i class="toggle-icon fa"></i>
+          <span class="sr-only">Toggle Menu</span>
+        </button>
+      </div>
+      <ul class="list-unstyled components mb-5 mt-5" style="max-height: 400px; overflow: auto;">
+        <li>
+          <a href="#"><span class="fa fa-home"></span><span class="nav-lable">Dashboard</span> </a>
+        </li>
+        <li>
+          <a href="#"><span class="fa fa-line-chart"></span> <span class="nav-lable">Tradings</span></a>
+
+
+        </li>
+        <li class="dropdown-btn">
+          <a href="#">
+            <span class="fa fa-bar-chart"></span> <span class="nav-lable">Analytics</span>
+            <!-- <span class="fa fa-caret-down"></span> -->
+          </a>
+        </li>
+        <div class="dropdown-container">
+          <li><a href="./forex.html">Currencies</a></li>
+          <li><a href="./index.html">Stock Profile</a></li>
+        </div>
+        <li class="dropdown-btn  active">
+          <a href="#"><span class="fa fa-lock"></span><span class="nav-lable">Research</span> </a>
+        </li>
+        <div class="dropdown-container">
+          <li><a href="#">Bank Reports</a></li>
+          <li class="active"><a href="./Inst_Insider.html">Whale Analysis</a></li>
+          <li><a href="./governmentTrade.html">Government</a></li>
+          <li><a href="./corpLobbying.html">Lobbying & Bills</a></li>
+        </div>
+        <li>
+          <a href="#"><span class="fa fa-newspaper-o"></span>
+            <span class="nav-lable">Case Studies</span></a>
+        </li>
+        <li>
+          <a href="./social.html"><span class="fa fa-heart-o"></span> <span class="nav-lable">Social</span></a>
+        </li>
+        <li>
+          <a href="#"><span class="fa fa-cog"></span> <span class="nav-lable">Setting</span></a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./images/logo.png" style="height: 20px; width: 20px; border-radius: 50%; margin-right: 5px;" />
+            <span class="nav-lable">My Profile</span></a>
+          </a>
+        </li>
+      </ul>
+      <div class="d-flex justify-content-center flex-column text-center align-items-center" style="margin-top: 60px;">
+        <!-- <button class="btn text-white border w-auto d-flex justify-content-center align-items-center btn-sm nav-lable"><span class="fa fa-sign-out mr-2"></span> Logout</button> -->
+        <div class="d-flex justify-content-center flex-row text-center align-items-center px-2 py-1 ml-3"
+          style="border: 1px solid var(--white); border-radius: 4px;  cursor: pointer;">
+          <span class="fa fa-sign-out mr-2"></span> <span class="nav-lable">Logout</span>
+        </div>
+        <div class="mt-2">
+          Copyright &copy;
+          <script>document.write(new Date().getFullYear())</script> All rights reserved</a>
+
+        </div>
+      </div>
+    </nav>
+        <!-- Sidebar End -->
+
+
+    <!-- Page Content  -->
+    <div id="content" class="container-fluid md-5 pb-3 m-0" style="height: 100vh; overflow-x: hidden;">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 p-4 text-white">
+            <div class="card p-3 pl-4" style="background-color: var(--bg-gray)">
+              <h1 class="text-white" style="font-weight: 700; font-size: 30px">Whale analysis</h1>
+              <p style="font-weight: 500; font-size: 16px;">Using our data across all recorded institutional positions,
+                you can view the
+                highest changes in current positions (whether institutions have increased or decreased their
+                holdings), and also view the largest changes of new or sold-out positions. These datasets act
+                as a measure of confidence within large institutions and hedge funds.
+                Insider datasets have also been collected in order to highlight the most recent trades taken
+                by corporate executives and large company shareholders, along with visualising trade actions
+                across the stock price timeline. For this, simply search for any stock in the search bar</p>
+            </div>
+          </div>
+        </div>
+        <div class="row px-2">
+          <!-- Active Top PositionChart Column Start -->
+          <div class="col-xs-12 col-md-6 activeTopPositionChartCol">
+            <div class="card card-class">
+              <div class="card-header item-header">
+                Top 20 Changes in Active positions
+              </div>
+              <div class="card-body item-body">
+                <!-- Active Top Position Chart -->
+                <!-- This is where you can increase or decrease height of this chart -->
+                <canvas id="activeTopPositionChart" style="width:100%; height: 200px;"></canvas>
+              </div>
+            </div>
+
+          </div>
+          <!-- Active Top PositionChart Column End -->
+
+          <!-- Active Bottom PositionChart Column Start -->
+          <div class="col-xs-12 col-md-6 activeBottomPositionChartCol">
+            <div class="card card-class">
+              <div class="card-header item-header">
+                Bottom 20 Changes in Active positions
+              </div>
+              <div class="card-body item-body">
+                <!-- Active Bottom Position Chart -->
+                <!-- This is where you can increase or decrease height of this chart -->
+                <canvas id="activeBottomPositionChart" style="width:100%; height: 200px;"></canvas>
+
+              </div>
+            </div>
+          </div>
+          <!-- Active Bottom PositionChart Column End -->
+
+          <!-- Change In New PositionChart Column Start -->
+          <div class="col-xs-12 mt-4 col-md-6 changeInNewPositionChartCol">
+            <div class="card card-class">
+              <div class="card-header item-header">
+                Top 20 Changes in New positions
+              </div>
+              <div class="card-body item-body">
+                <!-- Change In New Position Chart -->
+                <!-- This is where you can increase or decrease height of this chart -->
+                <canvas id="changeInNewPositionChart" style="width:100%; height: 200px;"></canvas>
+              </div>
+            </div>
+          </div>
+          <!-- Change In New PositionChart Column End -->
+
+          <!-- Sold Out Position Chart Column Start -->
+          <div class="col-xs-12 mt-4 col-md-6 soldOutPositionChartCol">
+            <div class="card card-class">
+              <div class="card-header item-header">
+                Top 20 Changes in Sold out positions
+              </div>
+              <div class="card-body item-body">
+                <!-- Sold out position Chart -->
+                <!-- This is where you can increase or decrease height of this chart -->
+                <canvas id="soldOutPositionChart" style="width:100%; height: 200px;"></canvas>
+              </div>
+            </div>
+          </div>
+          <!-- Sold Out Position Chart Column End -->
+
+          <!-- Insider Tracker Search Column Start -->
+          <div class="col-12 mt-4 insiderTrackerSearch">
+            <div class="card card-class">
+              <div class="card-header item-header d-flex justify-content-between">
+                <p class="m-0"> Insider Tracker Search</p>
+                <input id="search-input-track-searcher" type="text" class="p-1 px-4"
+                  style="background-color: transparent; outline: none; border-radius: 6px; border: 1px solid gray ; margin-left: 3px; margin-top: -4px;"
+                  height="40px !important" placeholder="Search" />
+              </div>
+              <div class="card-body item-body">
+                <!-- Insider Tracker Search -->
+                <!-- This is where you can increase or decrease height of this chart -->
+
+                <canvas id="insiderTrackerSearch" style="width:100%; height: 400px;"></canvas>
+              </div>
+            </div>
+          </div>
+          <!-- Insider Tracker Search Column End -->
+
+          <!-- Insider Latest Trades Column Start -->
+          <div class="col-12 mt-5 insiderLatestTrades">
+            <div class="card card-class">
+              <div class="card-header item-header d-flex justify-content-between">
+                <p class="m-0"> Insider Latest Trades</p>
+                <input id="search-input-for-latest-trades" type="text" class="p-1 px-4"
+                  style="background-color: transparent; outline: none; border-radius: 6px; border: 1px solid gray ; margin-left: 3px; margin-top: -4px;"
+                  height="40px !important" placeholder="Search" />
+              </div>
+              <div class="card-body item-body table-responsive">
+                <table class="table" style="width: 100%">
+                  <thead>
+                    <tr>
+                      <th>Ticker</th>
+                      <th>Owner</th>
+                      <th>Transaction</th>
+                      <th>Cost</th>
+                      <th>Share</th>
+                    </tr>
+                  </thead>
+                  <tbody id="corporate-lobbying-table-body">
+                    <tr>
+                      <td>CYTH</td>
+                      <td>FINE N SCOTT</td>
+                      <td>Buy</td>
+                      <td>0.43</td>
+                      <td>2999,32</td>
+                    </tr>
+                    <tr>
+                      <td>CYTH</td>
+                      <td>FINE N SCOTT</td>
+                      <td>Buy</td>
+                      <td>0.43</td>
+                      <td>2999,32</td>
+                    </tr>
+                    <tr>
+                      <td>CYTH</td>
+                      <td>FINE N SCOTT</td>
+                      <td>Buy</td>
+                      <td>0.43</td>
+                      <td>2999,32</td>
+                    </tr>
+                    <tr>
+                      <td>CYTH</td>
+                      <td>FINE N SCOTT</td>
+                      <td>Buy</td>
+                      <td>0.43</td>
+                      <td>2999,32</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- Insider Latest Trades Column End -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- </div> -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="./js/inst_insider.js"></script>
+</body>
+
+</html>

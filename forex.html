@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Forex</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <div class="wrapper d-flex align-items-stretch">
+
+        <!-- Sidebar Start -->
+        <nav id="sidebar">
+            <center>
+                <h5 style="color: var(--white)">
+                    <img src="./images/logo.png" class="showShortForm p-1"
+                        style="height: 30px; width: 30px; border: 1px solid var(--white);" />
+                </h5>
+                <h5 style="color: var(--white)" class="nav-lable px-4 text-left">
+                    <div class="d-flex">
+                        <img src="./images/logo.png" class="p-1"
+                            style="height: 40px; width: 40px; border: 1px solid var(--white);" />
+                        <p class="d-inline-block ml-2" style="font-weight: 400; font-size: 14px;"><small class="d-block"
+                                style="font-weight: 700; font-size: 17px">Trade Engine </small> Charts</p>
+                    </div>
+                </h5>
+            </center>
+            <div class="custom-menu">
+                <button type="button" id="sidebarCollapse" class="btn btn-secondary btn-sm">
+                    <i class="toggle-icon fa"></i>
+                    <span class="sr-only">Toggle Menu</span>
+                </button>
+            </div>
+            <ul class="list-unstyled components mb-5 mt-5" style="max-height: 390px; overflow: auto;">
+                <li>
+                    <a href="#"><span class="fa fa-home"></span><span class="nav-lable">Dashboard</span> </a>
+                </li>
+                <li>
+                    <a href="#"><span class="fa fa-line-chart"></span> <span class="nav-lable">Tradings</span></a>
+
+
+                </li>
+                <li class="dropdown-btn active">
+                    <a href="#">
+                        <span class="fa fa-bar-chart"></span> <span class="nav-lable">Analytics</span>
+                        <!-- <span class="fa fa-caret-down"></span> -->
+                    </a>
+                </li>
+                <div class="dropdown-container">
+                    <li class="active"><a href="./forex.html">Currencies</a></li>
+                    <li><a href="./index.html">Stock Profile</a></li>
+                </div>
+                <li class="dropdown-btn">
+                    <a href="#"><span class="fa fa-lock"></span><span class="nav-lable">Research</span> </a>
+                </li>
+                <div class="dropdown-container">
+                    <li><a href="#">Bank Reports</a></li>
+                    <li><a href="./Inst_Insider.html">Whale Analysis</a></li>
+                    <li><a href="./governmentTrade.html">Government</a></li>
+                    <li><a href="./corpLobbying.html">Lobbying & Bills</a></li>
+                </div>
+                <li>
+                    <a href="#"><span class="fa fa-newspaper-o"></span>
+                        <span class="nav-lable">Case Studies</span></a>
+                </li>
+                <li>
+                    <a href="./social.html"><span class="fa fa-heart-o"></span> <span
+                            class="nav-lable">Social</span></a>
+                </li>
+                <li>
+                    <a href="#"><span class="fa fa-cog"></span> <span class="nav-lable">Setting</span></a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./images/logo.png"
+                            style="height: 20px; width: 20px; border-radius: 50%; margin-right: 5px;" />
+                        <span class="nav-lable">My Profile</span></a>
+                    </a>
+                </li>
+            </ul>
+            <div class="d-flex justify-content-center flex-column text-center align-items-center"
+                style="margin-top: 60px;">
+                <div class="d-flex justify-content-center flex-row text-center align-items-center px-2 py-1 ml-3"
+                    style="border: 1px solid var(--white); border-radius: 4px;  cursor: pointer;">
+                    <span class="fa fa-sign-out mr-2"></span> <span class="nav-lable">Logout</span>
+                </div>
+                <div class="mt-2">
+                    Copyright &copy;
+                    <script>document.write(new Date().getFullYear())</script> All rights reserved</a>
+
+                </div>
+            </div>
+        </nav>
+        <!-- Sidebar End -->
+
+        <!-- Page Content  -->
+        <div id="content" class="container-fluid md-5 px-1 pb-1 m-0" style="height: 100vh; overflow-x: hidden;">
+            <nav class="navbar navbar-expand-lg homepage-banner p-1 pr-2 pl-2">
+                <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <script type="text/javascript"
+                        src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+                            {
+                                "symbols": [
+                                    {
+                                        "proName": "FOREXCOM:SPXUSD",
+                                        "title": "S&P 500"
+                                    },
+                                    {
+                                        "proName": "FOREXCOM:NSXUSD",
+                                        "title": "US 100"
+                                    },
+                                    {
+                                        "proName": "FX_IDC:EURUSD",
+                                        "title": "EUR/USD"
+                                    },
+                                    {
+                                        "proName": "BITSTAMP:BTCUSD",
+                                        "title": "Bitcoin"
+                                    },
+                                    {
+                                        "proName": "BITSTAMP:ETHUSD",
+                                        "title": "Ethereum"
+                                    }
+                                ],
+                                    "showSymbolLogo": true,
+                                        "colorTheme": "dark",
+                                            "isTransparent": true,
+                                                "displayMode": "adaptive",
+                                                    "locale": "en"
+                            }
+                        </script>
+                </div>
+                <input type="text" class="p-1"
+                    style="background-color: transparent; outline: none; border-radius: 6px; border: 1px solid var(--gray) ; margin-left: 3px; margin-top: -4px;"
+                    placeholder="Search" />
+
+                <!-- TradingView Widget END -->
+            </nav>
+            <div class="container-fluid mt-2">
+                <div class="row px-2">
+                    <div class="col-12 main-chart" style="height: 500px;">
+                        <div class="card card-class">
+                            <div class="card-body item-body">
+                                <!-- TradingView Widget BEGIN -->
+                                <div class="tradingview-widget-container">
+                                    <div id="tradingview_270ba" style="height: 400px;"></div>
+                                    <div class="tradingview-widget-copyright"><a
+                                            href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener"
+                                            target="_blank"><span class="blue-text">AAPL stock chart</span></a> by
+                                        TradingView</div>
+                                    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                                    <script type="text/javascript">
+                                        new TradingView.widget(
+                                            {
+                                                "height": 450,
+                                                "autosize": true,
+                                                "symbol": "NASDAQ:AAPL",
+                                                "interval": "D",
+                                                "timezone": "Etc/UTC",
+                                                "theme": "dark",
+                                                "style": "1",
+                                                "locale": "en",
+                                                "toolbar_bg": "#f1f3f6",
+                                                "enable_publishing": false,
+                                                "allow_symbol_change": true,
+                                                "container_id": "tradingview_270ba"
+                                            }
+                                        );
+                                    </script>
+                                </div>
+                                <!-- TradingView Widget END -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row p-2">
+                    <!-- Dealer Index Chart Start-->
+                    <div class="col-xs-12 col-md-3 dealerIndex pr-0 mt-1" style="min-height: 140px;">
+                        <div class="card card-class">
+                            <div class="card-header item-header py-1">
+                                Dealer Index
+                            </div>
+                            <div class="card-body item-body">
+                                <!-- Dealer Index Chart -->
+                                <canvas id="dealerIndex" style="width:100%; height: 200px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dealer Index Chart End-->
+
+                    <!-- Asset Manager Index Chart Start-->
+                    <div class="col-xs-12 col-md-3 assetManagerIndex pr-1 mt-1" style="min-height: 140px;">
+                        <div class="card card-class">
+                            <div class="card-header item-header py-1">
+                                Asset Manager Index
+                            </div>
+                            <div class="card-body item-body">
+                                <!-- Asset Manager Index Chart-->
+                                <canvas id="assetManagerIndex" style="width:100%; height: 200px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Asset Manager Index Chart End-->
+
+                    <!-- Leverage Fund Index Chart Start -->
+                    <div class="col-xs-12 col-md-3 leverageFundIndex  pr-1 mt-1" style="min-height: 140px;">
+                        <div class="card card-class">
+                            <div class="card-header item-header py-1">
+                                Leveraged Funds Index
+                            </div>
+                            <div class="card-body item-body">
+                                <!-- Leverage Fund Index Chart -->
+                                <canvas id="leverageFundIndex" style="width:100%; height: 200px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Leverage Fund Index Chart End-->
+
+                    <!-- Non Commercial Index Chart Start-->
+                    <div class="col-xs-12 col-md-3 nonCommercialIndex mt-1" style="min-height: 140px;">
+                        <div class="card card-class">
+                            <div class="card-header item-header py-1">
+                                Non-Commercial Index
+                            </div>
+                            <div class="card-body item-body">
+                                <!-- Non Commercial Index Chart -->
+                                <canvas id="nonCommercialIndex" style="width:100%; height: 200px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Non Commercial Index Chart End-->
+                </div>
+                <div class="row p-2">
+                    <!-- Interest Rate Chart Start -->
+                    <div class="col-xs-12 col-md-4 interestRate pr-1 mt-1" style="min-height: 140px;">
+                        <div class="card card-class">
+                            <div class="card-header item-header py-1">
+                                Interest Rate
+                            </div>
+                            <div class="card-body item-body">
+                                <!-- Interest Rate Chart -->
+                                <canvas id="interestRate" style="width:100%; height: 240px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Interest Rate Chart End-->
+
+                    <!-- Inflation Rate Chart Start -->
+                    <div class="col-xs-12 col-md-4 inflationRate pr-1 mt-1" style="min-height: 140px;">
+                        <div class="card card-class">
+                            <div class="card-header item-header py-1">
+                                Infllation rate
+                            </div>
+                            <div class="card-body item-body">
+                                <!-- Inflation Rate Chart -->
+                                <canvas id="inflationRate" style="width:100%; height: 240px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Inflation Rate Chart End-->
+
+                    <!-- Unemployment Rate Chart Start-->
+                    <div class="col-xs-12 col-md-4 unemploymentRate mt-1" style="min-height: 140px;">
+                        <div class="card card-class">
+                            <div class="card-header item-header py-1">
+                                Unemployment rate
+                            </div>
+                            <div class="card-body item-body">
+                                <!-- Unemployment Rate Chart-->
+                                <canvas id="unemploymentRate" style="width:100%; height: 240px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Unemployment Rate Chart End-->
+
+                </div>
+                <div class="row p-2">
+                    <!-- Calender Col Start -->
+                    <div class="col-xs-12 col-md-6 pr-1 mt-1 calenderCol" style="min-height: 140px;">
+                        <div class="card card-class">
+                            <div class="card-header item-header">
+                                Calender
+                            </div>
+                            <div class="card-body item-body table-responsive">
+                                <!-- TradingView Widget BEGIN -->
+                                <div class="tradingview-widget-container">
+                                    <div class="tradingview-widget-container__widget"></div>
+                                    <div class="tradingview-widget-copyright"><a
+                                            href="https://www.tradingview.com/markets/" rel="noopener"
+                                            target="_blank"><span class="blue-text">Market summary</span></a> by
+                                        TradingView</div>
+                                    <script type="text/javascript"
+                                        src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js"
+                                        async>
+                                            {
+                                                "width": 620,
+                                                    "height": 450,
+                                                        "symbolsGroups": [
+                                                            {
+                                                                "name": "Indices",
+                                                                "originalName": "Indices",
+                                                                "symbols": [
+                                                                    {
+                                                                        "name": "FOREXCOM:SPXUSD",
+                                                                        "displayName": "S&P 500"
+                                                                    },
+                                                                    {
+                                                                        "name": "FOREXCOM:NSXUSD",
+                                                                        "displayName": "US 100"
+                                                                    },
+                                                                    {
+                                                                        "name": "FOREXCOM:DJI",
+                                                                        "displayName": "Dow 30"
+                                                                    },
+                                                                    {
+                                                                        "name": "INDEX:NKY",
+                                                                        "displayName": "Nikkei 225"
+                                                                    },
+                                                                    {
+                                                                        "name": "INDEX:DEU40",
+                                                                        "displayName": "DAX Index"
+                                                                    },
+                                                                    {
+                                                                        "name": "FOREXCOM:UKXGBP",
+                                                                        "displayName": "UK 100"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "name": "Futures",
+                                                                "originalName": "Futures",
+                                                                "symbols": [
+                                                                    {
+                                                                        "name": "CME_MINI:ES1!",
+                                                                        "displayName": "S&P 500"
+                                                                    },
+                                                                    {
+                                                                        "name": "CME:6E1!",
+                                                                        "displayName": "Euro"
+                                                                    },
+                                                                    {
+                                                                        "name": "COMEX:GC1!",
+                                                                        "displayName": "Gold"
+                                                                    },
+                                                                    {
+                                                                        "name": "NYMEX:CL1!",
+                                                                        "displayName": "Crude Oil"
+                                                                    },
+                                                                    {
+                                                                        "name": "NYMEX:NG1!",
+                                                                        "displayName": "Natural Gas"
+                                                                    },
+                                                                    {
+                                                                        "name": "CBOT:ZC1!",
+                                                                        "displayName": "Corn"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "name": "Bonds",
+                                                                "originalName": "Bonds",
+                                                                "symbols": [
+                                                                    {
+                                                                        "name": "CME:GE1!",
+                                                                        "displayName": "Eurodollar"
+                                                                    },
+                                                                    {
+                                                                        "name": "CBOT:ZB1!",
+                                                                        "displayName": "T-Bond"
+                                                                    },
+                                                                    {
+                                                                        "name": "CBOT:UB1!",
+                                                                        "displayName": "Ultra T-Bond"
+                                                                    },
+                                                                    {
+                                                                        "name": "EUREX:FGBL1!",
+                                                                        "displayName": "Euro Bund"
+                                                                    },
+                                                                    {
+                                                                        "name": "EUREX:FBTP1!",
+                                                                        "displayName": "Euro BTP"
+                                                                    },
+                                                                    {
+                                                                        "name": "EUREX:FGBM1!",
+                                                                        "displayName": "Euro BOBL"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "name": "Forex",
+                                                                "originalName": "Forex",
+                                                                "symbols": [
+                                                                    {
+                                                                        "name": "FX:EURUSD",
+                                                                        "displayName": "EUR/USD"
+                                                                    },
+                                                                    {
+                                                                        "name": "FX:GBPUSD",
+                                                                        "displayName": "GBP/USD"
+                                                                    },
+                                                                    {
+                                                                        "name": "FX:USDJPY",
+                                                                        "displayName": "USD/JPY"
+                                                                    },
+                                                                    {
+                                                                        "name": "FX:USDCHF",
+                                                                        "displayName": "USD/CHF"
+                                                                    },
+                                                                    {
+                                                                        "name": "FX:AUDUSD",
+                                                                        "displayName": "AUD/USD"
+                                                                    },
+                                                                    {
+                                                                        "name": "FX:USDCAD",
+                                                                        "displayName": "USD/CAD"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ],
+                                                            "showSymbolLogo": true,
+                                                                "colorTheme": "dark",
+                                                                    "isTransparent": false,
+                                                                        "locale": "en"
+                                            }
+                                        </script>
+                                </div>
+                                <!-- TradingView Widget END -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Calender Col End -->
+
+                    <!-- Live Forex News Column Start-->
+                    <div class="col-xs-12 col-md-6 mt-1 liveForexNewsCol" style="min-height: 140px;">
+                        <div class="card card-class">
+                            <div class="card-header item-header">
+                                Live Forex News
+                            </div>
+                            <div class="card-body item-body" style="max-height: 450px; overflow-y: auto;"
+                                id="liveForexNews">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Live Forex News Column End-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="./js/forex.js"></script>
+</body>
+
+</html>
